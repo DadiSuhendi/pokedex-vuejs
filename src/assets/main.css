@@ -11,7 +11,6 @@ body, html {
 }
 #app {
   height:100%;
-  min-height: 100%;
 }
 a {
   display:block;
@@ -21,7 +20,6 @@ a {
 }
 
 .main {
-  height:100%;
   background: var(--grayscale-white);
   margin-left: 4px;
   margin-right:4px;
