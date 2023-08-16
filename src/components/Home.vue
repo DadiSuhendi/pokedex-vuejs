@@ -112,8 +112,8 @@
     }
     .icon-search {
         position: absolute;
-        top: 61px;
-        left: 25px;
+        top: 60px;
+        left: 107px;
         cursor: pointer;
     }
     .sort button {
