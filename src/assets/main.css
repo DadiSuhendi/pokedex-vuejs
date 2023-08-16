@@ -2,17 +2,20 @@
 body, html {
   margin: auto;
   padding: 0;
-  border-box: box-sizing;
+  box-sizing: border-box;
   font-family: roboto, sans-serif;
   text-decoration:none;
-  width:360px;
+  width:100%;
   height:100%;
   min-height: 100%;
 }
 #app {
   height:100%;
+  box-sizing:border-box;
 }
-a {
+
+.container-card .card-content {
+  cursor:pointer;
   display:block;
   text-decoration:none;
   width: 104px;
@@ -24,10 +27,11 @@ a {
   margin-left: 4px;
   margin-right:4px;
   border-radius: 8px 8px 0px 0px;
+  height: 100%;
+  box-sizing:border-box;
 }
 
 .big-card {
-  height: 100%;
   padding-top:24px;
   padding-bottom:24px;
   display: flex;
@@ -35,8 +39,11 @@ a {
   justify-content: center;
   padding-left:14px;
   padding-right:14px;
+  box-sizing:border-box;
 }
-
+.container-card {
+  height: 108px;
+}
 .card {
   width:90px;
   height: 108px;
@@ -80,3 +87,224 @@ a {
   text-transform: capitalize
 }
 
+/* DETAIL POKEMON */
+.view-detail {
+  height:100vh;
+  width:100%;
+  position:relative
+  /* background:var(--pokemon-type-grass); */
+}
+
+.header-detail {
+  display:flex;
+  justify-content:space-between;
+  height:76px;
+  align-items:center;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+  padding-bottom:24px;
+  box-sizing:border-box;
+}
+
+.back-button {
+  cursor:pointer;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  height:auto;
+  position:relative;
+}
+
+.back-button img {
+  margin-top:5px;
+}
+
+.detail-name {
+  font-size:24px;
+  text-align:left;
+  color: var(--grayscale-white);
+  font-weight:bold;
+  text-transform: capitalize;
+}
+
+.detail-number {
+  font-size: 16px;
+  color: var(--grayscale-white);
+  font-weight:bold;
+}
+
+.pokemon-slider {
+  height:144px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:16px;
+  padding-bottom:16px;
+  position:relative;
+  box-sizing:border-box;
+}
+
+.pokemon-slider .pokemon {
+  box-sizing:border-box;
+  margin-bottom:-75px;
+}
+
+.pokeball {
+  position:absolute;
+  top:5px;
+  right:5px;
+  opacity: .1;
+}
+
+.main-detail {
+  width:100%;
+  height:100%;
+  padding-left:4px;
+  padding-right:4px;
+  padding-bottom:4px;
+  box-sizing: border-box;
+}
+
+.big-card-detail {
+  width:100%;
+  height:100%;
+  background:white;
+  box-sizing: border-box;
+  border-radius:8px
+}
+
+.big-card-detail .badge-section {
+  padding-top:60px;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  text-transform: capitalize
+}
+
+.big-card-detail .badge {
+  width:46px;
+  height:20px;
+  border-radius:10px;
+  color:white;
+  font-size:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.about-section {
+  margin-top: 15px;
+  margin-bottom:0;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.attribute-section {
+  margin-top: -10px;
+  text-align:center;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.attribute-section .attribute-main {
+  display:flex; 
+  justify-content:center;
+  gap:10px;
+  align-items:center;
+}
+
+.attribute-section .attribute-main p {
+  font-size: 10px;
+  color:var(--grayscale-dark);
+}
+
+.attribute-title {
+  color: var(--grayscale-medium);
+  font-size: 8px;;
+}
+
+/* Gaya untuk sel dengan rowspan */
+td.rowspan {
+  position: relative;
+}
+
+/* Garis lurus di tengah sel rowspan */
+td.rowspan hr {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  color: var(--grayscale-light);
+  background-color: var(--grayscale-light);
+  display:block;
+  height: 100%;
+}
+
+.base-stats {
+  margin-top: 30px;
+  margin-bottom:0;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.stats-section {
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.stats-section table {
+  box-sizing: border-box;
+  width:100%;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.stats-section table td p {
+  color:var(--grayscale-dark);
+  font-size:10px;
+  margin-left:14px;
+}
+.stats-section table th p {
+  font-size:10px;
+  text-align:right;
+  margin-right:14px;
+}
+
+.stats-section td.rowspan hr {
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%);
+  color: var(--grayscale-light);
+  background-color: var(--grayscale-light);
+  display:block;
+  height: 100%;
+}
+
+.progress-bar {
+  width:100%;
+  height:4px;
+  margin-left: 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.stats-section .outer-bar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0.2;
+}
+.inside-bar {
+  position: absolute;
+  z-index:999;
+  height: 4px;
+  opacity: 1;
+  border-radius: 4px;
+}
