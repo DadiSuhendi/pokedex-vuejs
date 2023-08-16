@@ -15,7 +15,7 @@
         },
         methods: {
             async getListPokemon() {
-                let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=30');
+                let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
                 let data = await response.json();
                 let results = data.results;
                 
@@ -59,7 +59,7 @@
         watch: {
             search() {
                 let filteredPokemon = this.pokemonList.filter(item => {
-                    return item.name.includes(this.search)
+                    return item.name.includes(this.search.toLowerCase())
                 })
                 if(this.search === '') {
                     this.getListPokemon();
@@ -84,7 +84,10 @@
                 };
             },
             hpBar() {
-                const baseStat = this.selectedPokemon.stats[0].base_stat;
+                let baseStat = this.selectedPokemon.stats[0].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
@@ -93,7 +96,10 @@
                return { ...this.hpBar, ...this.headerStyle };
             },
             atkBar() {
-                const baseStat = this.selectedPokemon.stats[1].base_stat;
+                let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
@@ -102,7 +108,10 @@
                return { ...this.atkBar, ...this.headerStyle };
             },
             defBar() {
-                const baseStat = this.selectedPokemon.stats[1].base_stat;
+                let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
@@ -111,7 +120,10 @@
                return { ...this.defBar, ...this.headerStyle };
             },
             satkBar() {
-                const baseStat = this.selectedPokemon.stats[1].base_stat;
+                let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
@@ -120,7 +132,10 @@
                return { ...this.satkBar, ...this.headerStyle };
             },
             sdefBar() {
-                const baseStat = this.selectedPokemon.stats[1].base_stat;
+                let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
@@ -129,7 +144,10 @@
                return { ...this.sdefBar, ...this.headerStyle };
             },
             spdBar() {
-                const baseStat = this.selectedPokemon.stats[1].base_stat;
+                let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if(baseStat > 100) {
+                    baseStat = 100
+                }
                 return {
                     width: `${baseStat}%`
                 };
