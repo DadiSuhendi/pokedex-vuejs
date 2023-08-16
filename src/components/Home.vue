@@ -51,6 +51,10 @@
                 let response = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokemonId);
                 let data = await response.json();
                 this.selectedPokemon = data
+            },
+            showHome() {
+                this.viewAsDetail = false
+                this.search = ''
             }
         },
         mounted() {
@@ -198,7 +202,7 @@
     <!-- DETAIL POKEMON -->
     <div class="view-detail" v-else>
         <div class="header-detail" :style="headerStyle">
-            <div class="back-button" @click="viewAsDetail=false">
+            <div class="back-button" @click="showHome">
                 <div>
                     <img src="../assets/arrow-left.png" alt="">
                 </div>
