@@ -50,7 +50,7 @@
         <div class="main">
             <!-- Cards -->
             <div class="big-card">
-                <div v-for="(pokemon, index) in pokemonList">
+                <div v-for="(pokemon, index) in pokemonList" style="margin-bottom: 20px;">
                     <a href="">
                         <div class="card">
                             <div class="pokemon-number">#{{index+1}}</div>
