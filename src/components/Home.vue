@@ -91,6 +91,7 @@
     /* Search Section */
     .search {
         width: 100%;
+        position: relative;
     }
     .search-section {
         display: flex;
@@ -106,14 +107,16 @@
         padding-right: 16px;
         padding-top: 8px;
         padding-bottom: 8px;
+        position: relative;
     }
     .input-search::placeholder {
         color: var(--grayscale-medium);
     }
     .icon-search {
         position: absolute;
-        top: 60px;
-        left: 107px;
+        z-index: 99;
+        top: 8px;
+        left: 14px;
         cursor: pointer;
     }
     .sort button {
