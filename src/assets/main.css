@@ -21,6 +21,7 @@ a {
 }
 
 .main {
+  height:100%;
   background: var(--grayscale-white);
   margin-left: 4px;
   margin-right:4px;
@@ -35,7 +36,7 @@ a {
   flex-wrap:wrap;
   justify-content: center;
   padding-left:14px;
-  padding-right:24px;
+  padding-right:14px;
 }
 
 .card {
