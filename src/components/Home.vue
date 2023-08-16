@@ -14,9 +14,6 @@
             };
         },
         methods: {
-            async searchPokemon() {
-                
-            },
             async getListPokemon() {
                 let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=30');
                 let data = await response.json();
@@ -40,6 +37,20 @@
             },
             getTypeColor(type) {
                 return `var(--pokemon-type-${type})`;
+            },
+            async nextPokemon(id) {
+                this.viewAsDetail = true
+                let pokemonId = id+1;
+                let response = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokemonId);
+                let data = await response.json();
+                this.selectedPokemon = data
+            },
+            async previousPokemon(id) {
+                this.viewAsDetail = true
+                let pokemonId = id-1;
+                let response = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokemonId);
+                let data = await response.json();
+                this.selectedPokemon = data
             }
         },
         mounted() {
@@ -178,13 +189,14 @@
             <span class="detail-number">#{{selectedPokemon.id}}</span>
         </div>
         <div class="pokemon-slider" :style="headerStyle">
-            <div class="slider-left">
+            <div class="slider-left" v-if="selectedPokemon.id > 1" style="cursor: pointer;" @click="previousPokemon(selectedPokemon.id)">
                 <img src="../assets/slider-left.png" alt="">
             </div>
+            <div class="slider-left" v-else></div>
             <div class="pokemon">
                 <img :src="selectedPokemon.sprites.other['official-artwork'].front_default" alt="" width="200">
             </div>
-            <div class="slider-right">
+            <div class="slider-right" style="cursor: pointer;" @click="nextPokemon(selectedPokemon.id)">
                 <img src="../assets/slider-right.png" alt="">
             </div>
         </div>
