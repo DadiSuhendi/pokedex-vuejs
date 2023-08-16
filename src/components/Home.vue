@@ -69,7 +69,6 @@
 <style scoped>
     .container {
         width: 100%;
-        height: 100%;
         background-color: var(--identity-primary);
     }
     .header {
@@ -99,6 +98,7 @@
     }
     .input-search {
         width: 100%;
+        height: 32px;
         border-radius: 16px;
         height: 32px;
         border: none;
