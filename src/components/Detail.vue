@@ -111,7 +111,7 @@
                             <p>HP</p>
                         </th>
                         <td rowspan="6" class="rowspan" width="10"><hr></td>
-                        <td width="10"><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[0].base_stat }}</p></td>
+                        <td width="10"><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[0].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
@@ -123,7 +123,7 @@
                         <th width="10">
                             <p>ATK</p>
                         </th>
-                        <td><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[1].base_stat }}</p></td>
+                        <td><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[1].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
@@ -135,7 +135,7 @@
                         <th width="10">
                             <p>DEF</p>
                         </th>
-                        <td><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[2].base_stat }}</p></td>
+                        <td><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[2].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
@@ -147,7 +147,7 @@
                         <th width="10">
                             <p>SATK</p>
                         </th>
-                        <td><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[3].base_stat }}</p></td>
+                        <td><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[3].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
@@ -159,7 +159,7 @@
                         <th width="10">
                             <p>SDEF</p>
                         </th>
-                        <td><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[4].base_stat }}</p></td>
+                        <td><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[4].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
@@ -171,7 +171,7 @@
                         <th width="10">
                             <p>SPD</p>
                         </th>
-                        <td><p v-if="selectedPokemon.stats > 0">{{ selectedPokemon.stats[5].base_stat }}</p></td>
+                        <td><p v-if="selectedPokemon.stats">{{ selectedPokemon.stats[5].base_stat }}</p></td>
                         <td>
                             <div class="progress-bar">
                                 <div class="outer-bar" :style="headerStyle"></div>
