@@ -241,7 +241,7 @@
             :defStyles="defStyles"
             :satkStyles="satkStyles"
             :sdefStyles="sdefStyles"
-            :spdStyles="sdefStyles"
+            :spdStyles="spdStyles"
             :selectedPokemon="selectedPokemon"
         />
     </div>
