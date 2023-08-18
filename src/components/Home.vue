@@ -75,7 +75,7 @@
         },
         computed: {
             headerStyle() {
-                if (this.selectedPokemon && this.selectedPokemon.types.length > 0) {
+                if (this.selectedPokemon && this.selectedPokemon.types) {
                     const type = this.selectedPokemon.types[0].type.name;
                     const background = `var(${this.headerDetail.background}${type})`;
                     return {
@@ -85,7 +85,7 @@
                 return {};
             },
             colorStyle() {
-                if (this.selectedPokemon && this.selectedPokemon.types.length > 0) {
+                if (this.selectedPokemon && this.selectedPokemon.types) {
                     const type = this.selectedPokemon.types[0].type.name;
                     const color = `var(${this.headerDetail.background}${type})`;
                     return {
@@ -95,7 +95,7 @@
                 return {};
             },
             hpBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
                     let baseStat = this.selectedPokemon.stats[0].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
@@ -110,7 +110,7 @@
                return { ...this.hpBar, ...this.headerStyle };
             },
             atkBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
                     let baseStat = this.selectedPokemon.stats[1].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
@@ -125,8 +125,8 @@
                return { ...this.atkBar, ...this.headerStyle };
             },
             defBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
-                    let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
+                    let baseStat = this.selectedPokemon.stats[2].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
                     }
@@ -140,8 +140,8 @@
                return { ...this.defBar, ...this.headerStyle };
             },
             satkBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
-                    let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
+                    let baseStat = this.selectedPokemon.stats[3].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
                     }
@@ -155,8 +155,8 @@
                return { ...this.satkBar, ...this.headerStyle };
             },
             sdefBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
-                    let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
+                    let baseStat = this.selectedPokemon.stats[4].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
                     }
@@ -170,8 +170,8 @@
                return { ...this.sdefBar, ...this.headerStyle };
             },
             spdBar() {
-                if (this.selectedPokemon && this.selectedPokemon.stats.length > 0) {
-                    let baseStat = this.selectedPokemon.stats[1].base_stat;
+                if (this.selectedPokemon && this.selectedPokemon.stats) {
+                    let baseStat = this.selectedPokemon.stats[5].base_stat;
                     if(baseStat > 100) {
                         baseStat = 100
                     }
