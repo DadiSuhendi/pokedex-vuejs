@@ -3,8 +3,7 @@
   import About from './components/About.vue'
   export default {
     components: {
-        'home': Home,
-        'about': About
+        Home
     }
   }
 </script>

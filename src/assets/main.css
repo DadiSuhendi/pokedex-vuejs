@@ -223,13 +223,13 @@ body, html {
 }
 
 .attribute-section .attribute-main p {
-  font-size: 10px;
+  font-size: .7em;
   color:var(--grayscale-dark);
 }
 
 .attribute-title {
   color: var(--grayscale-medium);
-  font-size: 8px;;
+  font-size: .6em;
 }
 
 /* Gaya untuk sel dengan rowspan */
